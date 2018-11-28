@@ -14,7 +14,7 @@
 function conda_auto_env() {
   if [ -e "environment.yml" ]; then
     echo "environment.yml file found"
-    ENV=$(head -n 1 environment.yml | cut -f2 -d ' ')
+    ENV=find . -type d  -iname "*env"  | head -n1
     ACTIVATED="${ENV} activated!"
     DEACTIVATE="${ENV} is already activated. Deactivating..."
     CURRENT_ENV=$(conda env list | grep \* | cut -f 1 -d " ")
@@ -29,10 +29,7 @@ function conda_auto_env() {
         echo $ACTIVATED
       else
         # Create the environment and activate
-        echo "Conda env '$ENV' doesn't exist."
-        conda env create -q
-        conda activate $ENV
-        echo $ACTIVATED
+          echo "Couldn't activate '$ENV'"
       fi
     fi
   fi
