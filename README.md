@@ -1,6 +1,6 @@
 # conda-auto-env
 
-(Semi-)Automatically activate a conda environment when entering a folder  that contains a env directory.
+(Semi-)Automatically activate a conda environment when entering a folder  that contains a *_env directory as we usually have at the NY DS Team.
 
 This functionality was inspired by [conda auto activate](https://github.com/sotte/conda_auto_activate), [virtualenv auto activate](https://gist.github.com/garyjohnson/394c58e22a2adfa103e2) and [autoenv](https://github.com/kennethreitz/autoenv) and originally forked from [drorata's version](https://github.com/drorata/conda-auto-env)
 
