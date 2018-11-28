@@ -17,6 +17,7 @@ If you also want this script to be ran automatically, whenever you enter a direc
 ```bash
 export PROMPT_COMMAND="conda_auto_env;$PROMPT_COMMAND"
 ```
+This is not recommended as find might be too slow (find is used internally). You could run `conda_auto_env` to automatically activate it.
 
 Otherwise, whenever in a directory containing `environment.yml`, you can execute `conda_auto_env`.
 
